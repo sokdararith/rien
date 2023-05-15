@@ -1,0 +1,26 @@
+{
+  "authSelections": "userPoolOnly",
+  "resourceName": "riend1292b45",
+  "serviceType": "imported",
+  "region": "ap-southeast-1",
+  "aliasAttributes": [
+    "email",
+    "phone_number",
+    "preferred_username"
+  ],
+  "requiredAttributes": [
+    "email"
+  ],
+  "passwordPolicyMinLength": 8,
+  "passwordPolicyCharacters": [
+    "Requires Lowercase",
+    "Requires Uppercase",
+    "Requires Numbers",
+    "Requires Symbols"
+  ],
+  "mfaConfiguration": "OFF",
+  "autoVerifiedAttributes": [
+    "email"
+  ],
+  "mfaTypes": []
+}

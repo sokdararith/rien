@@ -1,0 +1,25 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-rien-dev-110549-authRole",
+      "UnauthRoleArn": "arn:aws:iam::368418447137:role/amplify-rien-dev-110549-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::368418447137:role/amplify-rien-dev-110549-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-rien-dev-110549-deployment",
+      "UnauthRoleName": "amplify-rien-dev-110549-unauthRole",
+      "StackName": "amplify-rien-dev-110549",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:368418447137:stack/amplify-rien-dev-110549/c843b630-f2d5-11ed-919f-02b0a8001760",
+      "AmplifyAppId": "d257n7exizvf4p"
+    },
+    "categories": {
+      "auth": {
+        "riend1292b45": {
+          "userPoolId": "ap-southeast-1_jhX6IrH4Z",
+          "userPoolName": "riende",
+          "webClientId": "4bm2i56du2j62la7tbqqejvfi6",
+          "nativeClientId": "4bm2i56du2j62la7tbqqejvfi6"
+        }
+      }
+    }
+  }
+}
