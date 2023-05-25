@@ -1,22 +1,39 @@
 <script setup>
-  // import { Authenticator } from "@aws-amplify/ui-vue";
-  // import "@aws-amplify/ui-vue/styles.css";
-
-  // import { Amplify } from 'aws-amplify';
-  // import awsconfig from './aws-exports';
-
-  // Amplify.configure(awsconfig);
-  import Login from './components/login.vue'
+  import { ref } from 'vue';
+  import Dexie from 'dexie';
+  import { db } from './db.js';
+  let message = ref();
+  let tables = ref([])
+  Dexie.exists('riensave')
+  .then(exists => {
+    if (exists) {
+      message.value = "database exists";
+      // db.open((database) => {
+      //   console.log(database);
+      // })
+      db.tables.forEach(tbl => {
+        tables.value.push({name: tbl.name})
+      });
+    } else {
+      message.value = "No database";
+      db.open((database) => {
+        console.log(database);
+      })
+    }
+  })
+  .catch(err => {
+    console.log(err);
+  }) 
 </script>
 
 <template>
-  <div class="h-screen flex justify-center items-center">
-    <Login />
+  <div>
+    <h1>List of Table</h1>
+    <ul>
+      <li v-for="table in tables">
+        {{ table.name }}
+      </li>
+    </ul>
   </div>
-  <!-- <authenticator>
-    <template v-slot="{ user, signOut }">
-      <h1>Hello {{ user.username }}!</h1>
-      <button @click="signOut">Sign Out</button>
-    </template>
-  </authenticator> -->
+  <router-view/>
 </template>
