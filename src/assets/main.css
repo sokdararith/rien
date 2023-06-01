@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "kantumruy";
+  src: url("../../public/fonts/kantumruy/Kantumruy-Regular.ttf")
+}
+
+@font-face {
+  font-family: "kantumruy-bold";
+  src: url("../../public/fonts/kantumruy/Kantumruy-Bold.ttf")
+}
+
+@font-face {
+  font-family: "kantumruy-light";
+  src: url("../../public/fonts/kantumruy/Kantumruy-Light.ttf")
+}
